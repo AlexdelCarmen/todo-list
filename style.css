@@ -4,4 +4,20 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100svh;
+  background-color: var(--dark-color1);
+  color: var(--light-color1);
+  font-family: var(--font-family);
 }
+
+:root {
+   --dark-color1: #222831; 
+   --dark-color2: #393E46;
+   --accent-color1: #00ADB5; 
+   --light-color1: #EEEEEE; 
+   --title-size: 48px; 
+   --subtitle-size: 32px; 
+   --text-size: 16px; 
+   --font-family: 'Roboto', sans-serif;
+}
+
+
