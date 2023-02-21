@@ -21,18 +21,27 @@
           placeholder="Add a task and press enter..."
         />
         <ul id="pending-tasks"></ul>
+        <ul id="completed-tasks"></ul>
       </div>
     </section>
     <footer></footer>
   </body>
   <script src="./script.js"></script>
   <script>
+    let completeButtons;
     const toDoList = document.getElementById("pending-tasks");
-    const toDoApp = new ToDoList(toDoList);
+    const completedToDos = document.getElementById("completed-tasks");
+    const toDoApp = new ToDoList(toDoList, completedToDos);
     const listField = document.getElementById("add-task");
+    toDoList.addEventListener("click", (e) => {
+      if (e.target.classList.contains("complete")) {
+        toDoApp.complete(e.target.parentElement.id);
+      } else if (e.target.classList.contains("delete")) {
+        toDoApp.remove(e.target.parentElement.id);
+      }
+    });
     listField.addEventListener("keydown", function (event) {
       if (event.key === "Enter") {
-        event.preventDefault();
         toDoApp.add(event.target.value);
         event.target.value = "";
       }
