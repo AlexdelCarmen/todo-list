@@ -7,6 +7,10 @@
     <title>To-Do List App</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./assets/css-reset.css" />
+    <script
+      src="https://kit.fontawesome.com/5874ab0288.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <section id="main-app">
@@ -21,22 +25,19 @@
           id="add-task"
           placeholder="Add a task and press enter..."
         />
-        <h3>Pending...</h3>
-        <ul id="pending-tasks">
-          <li>sample task</li>
-          <li>sample task</li>
-          <li>sample task</li>
-        </ul>
-        <h3>Done!</h3>
-        <ul id="completed-tasks">
-          <li>sample task</li>
-          <li>sample task</li>
-          <li>sample task</li>
-        </ul>
+        <h3 class="subheader">Pending...</h3>
+        <ul id="pending-tasks"></ul>
+        <h3 class="subheader">Done!</h3>
+        <ul id="completed-tasks"></ul>
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <p>Coded by <a href="https://github.com/AlexdelCarmen">Alejandro Borges</a> All Rights Reserved, 2023</p>
+
+    </footer>
   </body>
+
+
   <script src="./script.js"></script>
   <script>
     let completeButtons;

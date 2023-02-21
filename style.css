@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100svh;
@@ -25,11 +26,13 @@ body {
 }
 
 #main-app {
-  padding: 0.5rem 2rem;
+  padding: 1rem 2rem;
   background-color: var(--dark-color2);
   min-height: 80svh;
   border-radius: 1rem;
   box-shadow: 0px 0px 25px 10px var(--accent-color1);
+  display: flex;
+  flex-direction: column;
 }
 
 .app-header {
@@ -47,4 +50,74 @@ body {
 #sub-title {
     font-size: var(--subtitle-size);
     opacity: 0.9;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent; 
+}
+
+input::placeholder {
+    color: var(--light-color1);
+    opacity: 0.3;
+}
+
+#add-task {
+    border-bottom: 1px solid var(--light-color1);
+    width: 90%;
+    margin-top: 1.5rem;
+    font-size: var(--text-size);
+    color: var(--light-color1);
+    padding: 0.5rem 1rem;
+}
+
+.subheader {
+    font-size: var(--subtitle-size);
+    scale: 85%;
+}
+
+ul {
+    border-bottom: 2px solid var(--dark-color1);
+    padding: 1rem 3rem;
+}
+
+li {
+    list-style-type: none;
+    font-size: var(--text-size);
+    display: grid; 
+    grid-template-columns: 1fr repeat(2, 60px); 
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+#completed-tasks > li {
+    opacity: 0.4;
+    text-decoration: line-through; 
+}
+
+.complete {
+    color: #03C4A1;
+}
+
+.delete {
+    color: #EB455F;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: var(--text-size);
+    cursor: pointer;
+    padding: 0;
+    font-weight: bold;
+}
+
+footer {
+    margin: 1.5rem 0;
+}
+
+a:visited {
+    color: var(--accent-color1);
 }
