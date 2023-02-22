@@ -19,3 +19,7 @@ To start using this app, open the `index.html` in your browser, then add to-dos 
 ## Credits 
 
 This project was created by [Alejandro Borges](https://github.com/AlexdelCarmen)
+
+## License 
+
+This project is released under the MIT License [MIT License](./LICENSE)
